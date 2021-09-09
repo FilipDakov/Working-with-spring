@@ -68,10 +68,12 @@ public class AppController implements CommandLineRunner {
         int i = this.bookService.removeBooksByCopies(Integer.parseInt(bufferedReader.readLine()));
         System.out.println(i);*/
 
-        // 11  stored procedure
+/*        // 11  stored procedure
         System.out.println("Enter name of the Author");
         String[] params = this.bufferedReader.readLine().split("\\s+");
-        System.out.println(this.bookService.numberOfBooksByAuthor(params[0],params[1]));
+        System.out.println(this.bookService.numberOfBooksByAuthor(params[0],params[1]));*/
 
+
+        System.out.println("vsichko minava top");
     }
 }
