@@ -5,11 +5,13 @@ import com.example.spring_demo.entities.Book;
 import com.example.spring_demo.services.AuthorService;
 import com.example.spring_demo.services.BookService;
 import com.example.spring_demo.services.CategoryService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Controller;
 
 import java.io.BufferedReader;
 import java.util.List;
+import java.util.logging.Logger;
 
 @Controller
 public class AppController implements CommandLineRunner {
@@ -18,6 +20,7 @@ public class AppController implements CommandLineRunner {
     private final CategoryService categoryService;
     private final BookService bookService;
     private final BufferedReader bufferedReader;
+    private Logger logger = Logger.getLogger("logger");
 
     public AppController(AuthorService authorService, CategoryService categoryService, BookService bookService, BufferedReader bufferedReader) {
         this.authorServiceService = authorService;
@@ -73,7 +76,7 @@ public class AppController implements CommandLineRunner {
         String[] params = this.bufferedReader.readLine().split("\\s+");
         System.out.println(this.bookService.numberOfBooksByAuthor(params[0],params[1]));*/
 
-
+        logger.info("vsihcko se logva");
         System.out.println("vsichko minava top");
     }
 }
