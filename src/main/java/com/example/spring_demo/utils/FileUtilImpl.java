@@ -7,6 +7,7 @@ import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.LinkedHashSet;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 @Component
 public class FileUtilImpl implements FileUtil {
@@ -24,6 +25,6 @@ public class FileUtilImpl implements FileUtil {
             }
         }
 
-        return result.toArray(String[]::new);
+        return result.toArray(new String[0]);
     }
 }
